@@ -1,14 +1,15 @@
 package org.generation.blogPessoal.model;
 
+
 public class UsuarioLogin {
 
-	private String name;
-		
 	private String user;
 	
 	private String password;
 	
 	private String token;
+	
+	private String name; 
 
 	public String getName() {
 		return name;

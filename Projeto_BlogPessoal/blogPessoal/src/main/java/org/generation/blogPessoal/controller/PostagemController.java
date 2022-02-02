@@ -1,6 +1,5 @@
 package org.generation.blogPessoal.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.generation.blogPessoal.model.Postagem;
