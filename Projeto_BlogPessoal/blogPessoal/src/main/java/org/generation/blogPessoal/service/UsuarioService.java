@@ -59,7 +59,7 @@ public class UsuarioService {
 				String authHeader = "Basic" + new String(encodeAuth);
 
 				user.setToken(authHeader);
-				user.setName(usuario.get().getName());
+				user.setName(usuario.get().getNome());
 
 				return Optional.ofNullable(user);
 			}
