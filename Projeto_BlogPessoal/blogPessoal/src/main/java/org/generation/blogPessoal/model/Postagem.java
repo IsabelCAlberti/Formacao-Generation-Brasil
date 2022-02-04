@@ -2,8 +2,6 @@ package org.generation.blogPessoal.model;
 
 import java.util.Date;
 
-import javax.annotation.Generated;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,7 +24,7 @@ public class Postagem {
 	@Id
 	private @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
 
-	@NotNull
+	@NotNull(message = "O atributo título é Obrigatório!")
 	@Size(min = 5, max = 100)
 	private String title;
 
@@ -40,6 +38,10 @@ public class Postagem {
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
 
 	public Long getId() {
 		return id;
